@@ -1,19 +1,18 @@
-name=input("enter your name :")
-
-def myfunction(name):
-    ups=0
-    lows=0
-    for n in name:
-        if n.isupper():
-            ups=ups+1
+day_user=int(input("enter the day:"))
+month_user=int(input("enter the month:"))
+year_user=int(input("enter the year:"))
+def converter(day_user,month_user,year_user):
+    if month_user==10 and day_user>10:
+        intendedyear=year_user+622
+      
+    elif month_user>10:
+        intendedyear=year_user+622
+      
+    else:
+        intendedyear=year_user+621
+                   
+        print(intendedyear)   
+          
+converter(day_user,month_user,year_user)
         
-        elif n.islower():
-            lows=lows+1
-           
-        else:
-            pass
-    print(f"upper case is  {ups}")
-    print(f"lows case is {lows}")
-    
-myfunction(name)        
-     
+        
