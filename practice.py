@@ -1,20 +1,12 @@
-firstnumber=int(input("enter your first number:"))
-secondnumber=int(input("enter your second number:"))
-thirdnumber=int(input("enter your third number:"))
+from datetime import datetime,timedelta
 
-if firstnumber >secondnumber and secondnumber>thirdnumber:
-    print(firstnumber,secondnumber,thirdnumber)
-    
-elif secondnumber>firstnumber and firstnumber>thirdnumber:
-    print(secondnumber,firstnumber,thirdnumber)
-elif secondnumber>firstnumber and thirdnumber>firstnumber:
-    print(secondnumber,thirdnumber,firstnumber)
-    
-elif thirdnumber>firstnumber and firstnumber>secondnumber:
-    print(thirdnumber,firstnumber,secondnumber)
-elif thirdnumber>firstnumber and secondnumber>firstnumber:
-    print(thirdnumber,secondnumber,firstnumber)    
-else:
-    print(" ")
-    
-              
+
+start=datetime.now()
+
+end=start+timedelta(days=30)
+
+x=end-start
+print(x.days,x.total_seconds()/60)
+
+
+
